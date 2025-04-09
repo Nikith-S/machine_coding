@@ -13,10 +13,19 @@ setModal(false)
 }
   return (
     <>
+    <div onClick={setModal(false)}>
     <h1>Modal Creation</h1>
-    <button onClick={handleClick}>Click Me For the Modal</button>
-
+    <button onClick={(e) => {
+    e.stopPropagation() // Prevents the click event from bubbling up to the parent div
+     handleClick()
+    }}
+    
+    
+    
+    
+    >Click Me For the Modal</button>
     {modal ? <modal onClick= {handleCloseClick}/>: null}
+    </div>
     </>
   )
 }

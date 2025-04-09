@@ -16,7 +16,7 @@ setModal(false)
     <h1>Modal Creation</h1>
     <button onClick={handleClick}>Click Me For the Modal</button>
 
-    {modal ? <modal onClick= {handleCloseClick}/> : null}
+    {modal ? <modal onClick= {handleCloseClick}/>: null}
     </>
   )
 }
